@@ -1,5 +1,6 @@
 NAME = pipex
-SOURCE = ./src/pipex.c
+SOURCE = ./src/pipex.c \
+			./src/utils.c
 
 OBJS = $(SOURCE:.c=.o)
 
