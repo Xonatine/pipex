@@ -6,7 +6,7 @@
 /*   By: frlorenz <frlorenz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 11:36:05 by frlorenz          #+#    #+#             */
-/*   Updated: 2025/01/29 11:32:50 by frlorenz         ###   ########.fr       */
+/*   Updated: 2025/01/29 12:04:01 by frlorenz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main(int argc, char **argv, char **envp)
     else
     {
         custom_error("Error", "Wrong number of arguments");
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     return (0);
 }
