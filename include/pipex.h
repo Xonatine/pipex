@@ -25,7 +25,8 @@ char *get_cmd_path(char *cmd, char **envp);
 void free_split(char **str);
 void exit_error(void);
 void custom_error(char *header, char *msg);
-void sub_process(int *fd, char **argv, char **envp);
-void main_process(int *fd, char **argv, char **envp);
+void process_out(int *fd, char **argv, char **envp);
+void process_in(int *fd, char **argv, char **envp);
+void    main_process(char **argv, int *pipe, char **envp, int status);
 
 #endif
