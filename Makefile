@@ -1,3 +1,5 @@
+# valgrind --track-fds=yes --trace-children=yes
+# -fsanitize=address -g3
 NAME = pipex
 SOURCE = ./src/pipex.c \
 			./src/utils.c
@@ -13,10 +15,10 @@ all:$(NAME)
 
 $(NAME): $(OBJS)
 	@$(MAKE) -C ./lib/libft
-	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(NAME) -fsanitize=address -g3
+	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(NAME) 
 
 %.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $^ -fsanitize=address -g3
+	$(CC) $(CFLAGS) -o $@ -c $^
 
 clean:
 	@$(MAKE) clean -C ./lib/libft
